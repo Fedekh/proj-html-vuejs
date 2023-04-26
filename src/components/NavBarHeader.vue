@@ -13,10 +13,17 @@ export default {
 <template>
 <ul class="d-sm-flex flex-md-row gap-3">
    <li v-for="(listitem,index) in listMenu" :key="index"> <a href="#">{{ listitem }}</a></li>
-   <i class="align-self-center fa-solid fa-border-none"></i>
+   <img class="align-self-center" src="../assets/svg/svg-1.svg" alt="">
 </ul>
 </template>
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
+
+ul{
+    img{
+        width: 15px;
+        height: 15px;
+    }
+}
 </style>

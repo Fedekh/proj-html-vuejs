@@ -1,8 +1,12 @@
 <script>
+import FooterList from "./FooterList.vue";
 import { store } from "../store";
 
 export default {
     name: 'AppFooter',
+    components: {
+    FooterList,
+  },
     data() {
         return {
             store,
@@ -36,27 +40,15 @@ export default {
 <template>
     <section class="wrapper-footer">
         <div class="footer">
-            <ul class="container d-flex justify-content-evenly align-items-center">
+            <ul class="container d-sm-flex flex-lg-row justify-content-md-evenly align-items-md-center flex-sm-column justify-content-sm-start align-items-sm-center">
                 <li class="text-center">
                     <a href="">
                         <img :src="getImagePath()" alt="">
                     </a>
                     <p>{{ footerMenu.logo[1] }}</p>
                 </li>
-                <li>
-                    <p>{{ footerMenu.email_phone[0] }}</p>
-                    <p>{{ footerMenu.email_phone[1] }}</p>
-                </li>
-                <li>
-                    <p>{{ footerMenu.address[0] }}</p>
-                    <p>{{ footerMenu.address[1] }}</p>
-                </li>
-                <li>
-                    <p>{{ footerMenu.stayInTouch[0] }}</p>
-                    <div class="">
-                        <a href="" class="mx-2" v-for="icon in footerMenu.stayInTouch[1]" :key="icon" v-html="icon"></a>
-                    </div>
-                </li>
+                <FooterList :footerMenu="footerMenu" :stayInTouchIcons="footerMenu.stayInTouch[1]" />
+
             </ul>
         </div>
     </section>
