@@ -1,0 +1,70 @@
+<script >
+export default {
+    name: 'Jumbotron',
+}
+
+</script>
+
+<!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
+
+
+<template>
+    <div class="wrapper">
+        <section class=" ms_container d-sm-flex justify-content-evenly">
+            <section class="description-jumbo d-sm-flex flex-column justify-content-center">
+                <h1>Devotion that never <span>ends</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem in eaque facilis ab totam debitis itaque id, sed maxime incidunt. Labore, reprehenderit! Necessitatibus quis voluptatibus, vero numquam possimus voluptate reiciendis.</p>
+                <button class="btn mx-auto"><a href="">READ MORE</a></button>
+            </section>
+            <div class="slider">
+                <img src="../assets/img/img/h-2-slider-img-16.png" alt="">
+            </div>
+        </section>
+        <div class="cla">
+            <i class="fa-solid fa-circle-chevron-left left-i" style="color: #e1c0b0;"></i>
+            <i class="fa-solid fa-circle-chevron-right right-i" style="color: #e1c0b0;"></i>
+        </div>
+    </div>
+</template>
+
+
+<!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
+
+
+<style lang="scss">
+@use "../style/general.scss" as *;
+@use "../style/partials/variables.scss" as *;
+
+.wrapper {
+    position: relative;
+
+    section {
+        width: $width-ms;
+        border: 1px solid green;
+        .btn{
+            border: 1px solid $btn-border;
+            width: 200px;
+        }
+
+    }
+
+    .cla {
+        cursor: pointer;
+
+        .left-i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+
+        }
+
+        .right-i {
+            position: absolute;
+            top: 50%;
+
+            right: 10px;
+
+        }
+    }
+}
+</style>

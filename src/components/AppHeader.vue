@@ -1,12 +1,14 @@
 <script>
-import AppNavBar from "./AppNavBar.vue";
+import NavBar from "./NavBar.vue";
+import JumbotronApp from "./JumbotronApp.vue";
 
 import { store } from "../store";
 
 export default {
     name:'AppHeader',
     components: {
-        AppNavBar
+        NavBar,
+        JumbotronApp
     },
     data() {
         return {
@@ -18,16 +20,28 @@ export default {
 }
 
 </script>
+
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-    <div class="wrapper">
-        <div class="logo"><img src="../assets/img/img/logo-sidearea-1.png" alt=""></div>
-        <AppNavBar :listMenu="navBarMenu"/>
+    <section id="header" class="wrapper">
+        <div class="container d-sm-flex justify-content-between align-items-center">
+            <div class="logo"><img src="../assets/img/img/logo-sidearea-1.png" alt=""></div>
+            <NavBar :listMenu="navBarMenu"/>
+        </div>
+    </section>
+    <div class="container">
+        <JumbotronApp/>
     </div>
 </template>
+
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
-<style lang="scss" scoped>
-@use "../style/general.scss";
+<style scoped lang="scss">
+@use "../style/partials/variables.scss" as *;
+.wrapper{
+    border: 1px solid red;
+    position: relative;
+    
+}
 </style>
