@@ -1,5 +1,5 @@
 <script>
-import NavBar from "./NavBar.vue";
+import NavBarHeader from "./NavBarHeader.vue";
 import JumbotronApp from "./JumbotronApp.vue";
 
 import { store } from "../store";
@@ -7,7 +7,7 @@ import { store } from "../store";
 export default {
     name:'AppHeader',
     components: {
-        NavBar,
+        NavBarHeader,
         JumbotronApp
     },
     data() {
@@ -24,10 +24,10 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-    <section id="header" class="wrapper">
+    <section id="header" class="wrap">
         <div class="container d-sm-flex justify-content-between align-items-center">
             <div class="logo"><img src="../assets/img/img/logo-sidearea-1.png" alt=""></div>
-            <NavBar :listMenu="navBarMenu"/>
+            <NavBarHeader :listMenu="navBarMenu"/>
         </div>
     </section>
     <div class="container">
@@ -39,9 +39,12 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/variables.scss" as *;
-.wrapper{
+.wrap{
     border: 1px solid red;
     position: relative;
+    .container{
+        height: $header-h;
+    }
     
 }
 </style>

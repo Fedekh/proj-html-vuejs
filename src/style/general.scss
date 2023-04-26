@@ -9,12 +9,17 @@ ul {
     color: inherit;
 }
 
-a {
+a, a:hover{
     text-decoration: none;
     color: inherit;
 }
 
-.ms_container{
-    width: $width-ms;
+.ms_container1{
+    width: $width-ms1;
+    margin: 0 auto;
+}
+
+.ms_container2{
+    width: $width-ms2;
     margin: 0 auto;
 }

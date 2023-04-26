@@ -10,13 +10,13 @@ export default {
 
 <template>
     <div class="wrapper">
-        <section class=" ms_container d-sm-flex justify-content-evenly">
-            <section class="description-jumbo d-sm-flex flex-column justify-content-center">
+        <section class="container d-sm-flex justify-content-between">
+            <article class="col-5 description-jumbo d-sm-flex flex-column justify-content-center">
                 <h1>Devotion that never <span>ends</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem in eaque facilis ab totam debitis itaque id, sed maxime incidunt. Labore, reprehenderit! Necessitatibus quis voluptatibus, vero numquam possimus voluptate reiciendis.</p>
-                <button class="btn mx-auto"><a href="">READ MORE</a></button>
-            </section>
-            <div class="slider">
+                <button class="btn"><a href="">READ MORE</a></button>
+            </article>
+            <div class="slider col-4">
                 <img src="../assets/img/img/h-2-slider-img-16.png" alt="">
             </div>
         </section>
@@ -37,10 +37,11 @@ export default {
 
 .wrapper {
     position: relative;
+    width: 100%;
 
     section {
-        width: $width-ms;
-        border: 1px solid green;
+        width: $width-ms1;
+        border: 1px solid rgb(117, 216, 117);
         .btn{
             border: 1px solid $btn-border;
             width: 200px;

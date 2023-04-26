@@ -1,9 +1,18 @@
 <script>
-
+import AppContent from "./AppContent.vue";
+import AppFeatures from "./AppFeatures.vue";
+import AppContacts from "./AppContacts.vue"
+import AppNewsLetter from "./AppNewsLetter.vue";
 import { store } from "../store";
 
 export default {
     name: 'AppMain',
+    components: {
+        AppFeatures,
+        AppContent,
+        AppContacts,
+        AppNewsLetter
+    },
     data() {
         return {
             store
@@ -15,7 +24,10 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-
+    <AppContent />
+    <AppFeatures />
+    <AppContacts />
+    <AppNewsLetter />
 </template>
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
