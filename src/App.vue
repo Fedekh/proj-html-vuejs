@@ -34,10 +34,12 @@ export default {
 
 
 <style lang="scss">
-@use "./style/general.scss";
+@use "./style/general.scss" as*;
+@use "./style/partials/variables.scss" as*;
+
 
 body {
-    background-color: rgb(126, 122, 122);
+    background-color: $body-bg;
     
 }
 </style>

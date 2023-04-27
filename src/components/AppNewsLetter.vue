@@ -94,13 +94,13 @@ export default {
 
         .month {
             background-color: #F4DBDA;
-    color: #1c1c1c;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 1rem;
-    clip-path: polygon(9% 2%, 90% 2%, 90% 100%, 48% 78%, 9% 100%);
-    margin-top: -2px;
-    width: 60px;
+            color: #1c1c1c;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 1rem;
+            clip-path: polygon(9% 2%, 90% 2%, 90% 100%, 48% 78%, 9% 100%);
+            margin-top: -2px;
+            width: 60px;
         }
 
     }

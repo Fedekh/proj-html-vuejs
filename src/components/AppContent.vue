@@ -92,11 +92,11 @@ export default {
             &:hover .overlay {
                 display: block;
                 position: absolute;
-                top: 50%;
+                top: 70px;
                 left: 10px;
                 transform: translateY(-50%);
                 z-index: 3;
-                background-color: rgba(0, 128, 0, 0.8);
+                background-color: rgba(0, 128, 0, 0.4);
                 color: #fff;
                 padding: 20px;
                 border-radius: 10px;
@@ -131,7 +131,7 @@ export default {
 
         .link1 {
             background-color: red;
-            top: 480px;
+            top: 570px;
 
             img {
                 margin: 5px;
@@ -139,7 +139,7 @@ export default {
         }
 
         .link2 {
-            top: 550px;
+            top: 620px;
             background-color: white;
 
             img {
