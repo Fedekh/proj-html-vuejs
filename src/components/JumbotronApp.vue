@@ -3,7 +3,15 @@ export default {
     name: 'Jumbotron',
     data() {
         return {
-            sliders: [
+            outLineImg: [                                           // array di immagini di abbellimento (le maledette foglioline)
+                "../assets/img/img/h-2-slider-img-12.png",
+                "../assets/img/img/h-2-slider-img-13.png",
+                "../assets/img/img/h-2-slider-img-14.png",
+                "../assets/img/img/h-2-slider-img-17.png",
+                "../assets/img/img/short-slider-rev-1-img-2.png",
+                "../assets/img/img/short-slider-rev-1-img-6.png"
+            ],
+            sliders: [                                              // array di immagini del carosello
                 "../assets/img/img/h-2-slider-img-11.png",
                 "../assets/img/img/h-2-slider-img-15.png",
                 "../assets/img/img/h-2-slider-img-16.png"
@@ -14,11 +22,14 @@ export default {
         }
     },
     methods: {
-        getImagePath(activeImage) {
+        getImagePath(activeImage) {                                     // funzione per prendere il path dell'immagine
             return new URL(this.sliders[activeImage], import.meta.url).href;
         },
+        getOutLineImgPath(index) {                                      // funzione per prendere il path delle foglioline
+            return new URL(this.outLineImg[index], import.meta.url).href;
+        },
 
-        showNext() {
+        showNext() {                                    // funzione per mostrare l'immagine successiva
             clearInterval(this.interval);
             if (this.activeImage < this.sliders.length - 1) {
                 this.activeImage++;
@@ -29,7 +40,7 @@ export default {
             this.startAutoplay();
         },
 
-        showPrev() {
+        showPrev() {                                    // funzione per mostrare l'immagine precedente
             clearInterval(this.interval);
             if (this.activeImage > 0) {
                 this.activeImage--;
@@ -40,7 +51,7 @@ export default {
             this.startAutoplay();
         },
 
-        startAutoplay() {
+        startAutoplay() {                                   // funzione per l'autoplay
             this.interval = setInterval(() => {
                 if (this.sensoMarcia) {
                     this.showPrev();
@@ -49,20 +60,20 @@ export default {
                 }
             }, this.time);
         },
-
-        showslide(indexToShow) {
-            this.activeImage = indexToShow;
-        },
-
-        mouseHover() {
+        mouseHover() {                              // funzione per fermare l'autoplay al mousehover
             clearInterval(this.interval);
         },
 
-        mouseLeave() {
+        mouseLeave() {                          // funzione per far ripartire l'autoplay dopo il mouseleave
+            this.startAutoplay();
+        },
+        showslide(indexToShow) {                // funzione per mostrare l'immagine cliccata nei dots piccoli
+            clearInterval(this.interval);
+            this.activeImage = indexToShow;
             this.startAutoplay();
         }
     },
-    mounted() {
+    mounted() {                                     // funzione per far partire l'autoplay all'apertura della pagina
         this.startAutoplay();
 
     }
@@ -83,17 +94,26 @@ export default {
                     voluptate reiciendis.</p>
                 <button class="btn"><a href="">READ MORE</a></button>
             </article>
+            <div class="outline">
+                <div v-for="(element,index) in outLineImg" :id="`out_${index+1}`"><img :src="getOutLineImgPath(index)" alt=""></div>
+               
+            </div>
             <div class="slider col-4 align-self-center" @mouseover="mouseHover" @mouseleave="mouseLeave">
                 <div>
                     <div class="slider-image">
                         <img id="slider-image" :src="getImagePath(activeImage)" alt="" />
                     </div>
+
                 </div>
             </div>
         </section>
         <div class="cla">
             <i @click="showPrev" class="fa-solid fa-circle-chevron-left left-i"></i>
             <i @click="showNext" class="fa-solid fa-circle-chevron-right right-i"></i>
+        </div>
+        <div class="slider-dots">
+            <i v-for="i in sliders.length" :key="i" :class="['fas', 'fa-circle', { active: activeImage === i - 1 }]"
+                @click="showslide(i - 1)"></i>
         </div>
     </div>
 </template>
@@ -110,39 +130,100 @@ export default {
     position: relative;
     width: 100%;
 
+    .slider-dots {
+        position: absolute;
+        left: 50%;
+
+        i {
+            margin: 0 5px;
+            cursor: pointer;
+            margin-inline: 10px;
+            font-size: .6rem;
+            color: $btn-border;
+
+            &.active {
+                font-size: 1rem;
+                transform: scale(1.5);
+            }
+        }
+
+    }
+
     section {
         width: $width-ms1;
         height: 350px;
-        border: 1px solid rgb(117, 216, 117);
 
         .btn {
             border: 1px solid $btn-border;
             width: 200px;
+            &:hover{
+                background-color: $btn-border;
+            }
         }
-        #slider-image{
-            width: 300px;
+
+        .outline {
+            div {
+                position: absolute;
+                width: 40px;
+            }
+
+            #out_1 {
+                bottom: 210px;
+                left: 640px;
+            }
+
+            #out_2 {
+                bottom: 60px;
+                left: 700px;
+            }
+
+            #out_3 {
+                top: 10px;
+                right: 72px;
+            }
+
+            #out_4 {
+                bottom: 47px;
+                right: 41px;
+            }
+
+            #out_5 {
+                top: 10px;
+                right: 476px;
+            }
+
+            #out_6 {
+                top: 80px;
+                right: 31px;
+            }
         }
+
+
     }
 
+    #slider-image {
+        width: 300px;
+    }
+}
 
-    .cla {
-        cursor: pointer;
-        color: $btn-border;
-        font-size: 2rem;
 
-        .left-i {
-            position: absolute;
-            left: 10px;
-            top: 50%;
+.cla {
+    cursor: pointer;
+    color: $btn-border;
+    font-size: 2rem;
 
-        }
+    .left-i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
 
-        .right-i {
-            position: absolute;
-            top: 50%;
-            right: 10px;
+    }
 
-        }
+    .right-i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+
     }
 }
 </style>
