@@ -27,6 +27,7 @@ export default{
 section{
     background-image: url('../assets/img/background-contact.jpg');
     background-size: cover;
+    filter: opacity(.8);
     .wrapper{
     height: 500px;
     position: relative;

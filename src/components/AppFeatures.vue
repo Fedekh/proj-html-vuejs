@@ -60,7 +60,6 @@ export default {
     h2 {
         font-size: 3rem;
     }
-
     .cta {
         position: relative;
 
