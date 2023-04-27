@@ -9,7 +9,8 @@ export default {
 
 
 <template>
-    <div class="wrapper">
+    <div class="wrapper pt-1 pb-5 my-5">
+        
         <section class="container d-sm-flex justify-content-between">
             <article class="col-5 description-jumbo d-sm-flex flex-column justify-content-center">
                 <h1>Devotion that never <span>ends</span></h1>
@@ -46,19 +47,16 @@ export default {
             border: 1px solid $btn-border;
             width: 200px;
         }
-
     }
 
     .cla {
         cursor: pointer;
-
         .left-i {
             position: absolute;
             left: 10px;
             top: 50%;
 
         }
-
         .right-i {
             position: absolute;
             top: 50%;

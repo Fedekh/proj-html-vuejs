@@ -27,3 +27,32 @@ a, a:hover{
     width: $width-ms2;
     margin: 0 auto;
 }
+
+span{
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+ .up {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        z-index: 2;
+        background-color: $footer-bg;
+        right: 20px;
+        bottom: 60px;
+        &:hover::before {
+            content: "Torna su";
+            position: absolute;
+            bottom: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px;
+            background-color: $footer-bg;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 3px;
+            white-space: nowrap;
+          }
+    }

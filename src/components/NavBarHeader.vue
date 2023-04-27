@@ -11,11 +11,13 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-<ul class="d-sm-flex flex-md-row gap-3">
+<ul class="d-sm-flex flex-md-row gap-3 m-0">
    <li v-for="(listitem,index) in listMenu" :key="index"> <a href="#">{{ listitem }}</a></li>
-   <img class="align-self-center" src="../assets/svg/svg-1.svg" alt="">
+   <a href=""><img class="align-self-center" src="../assets/svg/svg-1.svg" alt=""></a>
 </ul>
 </template>
+
+
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>

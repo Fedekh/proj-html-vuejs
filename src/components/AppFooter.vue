@@ -5,8 +5,8 @@ import { store } from "../store";
 export default {
     name: 'AppFooter',
     components: {
-    FooterList,
-  },
+        FooterList,
+    },
     data() {
         return {
             store,
@@ -27,7 +27,7 @@ export default {
 
         }
     },
-    methods:{
+    methods: {
         getImagePath() {
             return new URL(this.footerMenu.logo[0], import.meta.url).href;
         }
@@ -35,12 +35,15 @@ export default {
 }
 
 </script>
+
+
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-    <section class="wrapper-footer">
+    <section id="footer" class="wrapper-footer">
         <div class="footer">
-            <ul class="container d-sm-flex flex-lg-row justify-content-md-evenly align-items-md-center flex-sm-column justify-content-sm-start align-items-sm-center">
+            <ul
+                class="container d-sm-flex flex-lg-row justify-content-md-evenly align-items-md-center flex-sm-column justify-content-sm-start align-items-sm-center">
                 <li class="text-center">
                     <a href="">
                         <img :src="getImagePath()" alt="">
@@ -53,16 +56,20 @@ export default {
         </div>
     </section>
 </template>
+
+
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
 @use "../style/partials/variables.scss" as *;
 
 .wrapper-footer {
+    position: relative;
     background-color: $footer-bg;
 
     .container {
         height: $footer-h;
+        margin-bottom: 0;
     }
 }
 </style>

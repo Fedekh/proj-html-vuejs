@@ -9,7 +9,8 @@ export default {
 
 
 <template>
-    <div class="newsletter my-5">
+    <div class="newsletter">
+        <a class="up d-flex justify-content-center" href="#header"><img src="../assets/svg/svg-2.svg" alt=""></a>
         <div class="container simone d-flex flex-wrap justify-content-center gap-3">
             <div class="logo">
                 <img class="label" src="../assets/img/7maggio.png">
@@ -39,9 +40,11 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
-.simone {
-    width: 100%;
-
+@use "../style/general.scss" as *;
+@use "../style/partials/variables.scss" as *;
+.newsletter {
+    position: relative;
+    padding: 90px 0;
     .logo {
         width: calc(100% / 3 - 30px);
         position: relative;
@@ -52,7 +55,7 @@ export default {
             top: -10px;
             left: 10px;
         }
-       
+
     }
 }
 </style>

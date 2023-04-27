@@ -5,7 +5,7 @@ import JumbotronApp from "./JumbotronApp.vue";
 import { store } from "../store";
 
 export default {
-    name:'AppHeader',
+    name: 'AppHeader',
     components: {
         NavBarHeader,
         JumbotronApp
@@ -25,26 +25,34 @@ export default {
 
 <template>
     <section id="header" class="wrap">
-        <div class="container d-sm-flex justify-content-between align-items-center">
-            <div class="logo"><img src="../assets/img/img/logo-sidearea-1.png" alt=""></div>
-            <NavBarHeader :listMenu="navBarMenu"/>
+        <div class="ms_container1 d-sm-flex justify-content-between align-items-center">
+            <a href=""><img src="../assets/img/img/logo-sidearea-1.png" alt=""></a>
+            <NavBarHeader :listMenu="navBarMenu" />
         </div>
     </section>
-    <div class="container">
-        <JumbotronApp/>
+    <div class="ms_container1">
+        <JumbotronApp />
     </div>
 </template>
 
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style scoped lang="scss">
+@use "../style/general.scss" as *;
 @use "../style/partials/variables.scss" as *;
-.wrap{
+
+.wrap {
     border: 1px solid red;
-    position: relative;
-    .container{
-        height: $header-h;
-    }
     
+    position: relative;
+    .ms_container1{
+        height: $header-h;
+     
+        .jumbo-container {
+            position: relative;
+    
+        }
+    }
+
 }
 </style>

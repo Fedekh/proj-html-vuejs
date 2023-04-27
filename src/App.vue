@@ -37,6 +37,7 @@ export default {
 @use "./style/general.scss";
 
 body {
-    background-color: rgb(156, 151, 151);
+    background-color: rgb(126, 122, 122);
+    
 }
 </style>
