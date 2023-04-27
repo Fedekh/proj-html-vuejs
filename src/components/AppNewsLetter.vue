@@ -50,8 +50,8 @@ export default {
                     <p class="month mx-1">{{ element.mounth_year }}</p>
                 </div>
                 <img :src="getImagePath(element)" alt="">
-                <p class="my-3">{{ element.descr }}</p>
-                <p>{{ element.sub }}</p>
+                <p class="descr my-3">{{ element.descr }}</p>
+                <p class="sub">{{ element.sub }}</p>
             </div>
         </div>
     </div>
@@ -101,6 +101,14 @@ export default {
             clip-path: polygon(9% 2%, 90% 2%, 90% 100%, 48% 78%, 9% 100%);
             margin-top: -2px;
             width: 60px;
+        }
+        .descr{
+            font-weight: 600;
+
+        }
+        .sub{
+            font-style: italic;
+            font-weight: 500;
         }
 
     }

@@ -13,7 +13,7 @@ export default{
         <div class="wrapper container d-flex flex-column justify-content-center align-items-center">
             <h2>Want to work with us ? Send us <span>a message!</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eum harum, nihil quasi a quis impedit temporibus veniam eligendi, praesentium perspiciatis, atque velit numquam assumenda itaque qui officia. Quaerat, magnam.</p>
-            <button><a href="#header">CONTACT</a></button>
+            <button class="btn"><a href="#header">CONTACT</a></button>
         </div>
     </section>
 
@@ -37,6 +37,11 @@ section{
         background-color: $footer-bg;
         width: 150px;
         height: 40px;
+        &:hover{
+            transform: scale(1.2);
+        background-color: $footer-bg;
+
+        }
     }
 
     }

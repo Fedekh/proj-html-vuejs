@@ -42,8 +42,6 @@ export default {
 @use "../style/partials/variables.scss" as *;
 
 .wrap {
-    border: 1px solid red;
-    
     position: relative;
     .ms_container1{
         height: $header-h;
