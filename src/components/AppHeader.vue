@@ -2,7 +2,6 @@
 import NavBarHeader from "./NavBarHeader.vue";
 import JumbotronApp from "./JumbotronApp.vue";
 
-import { store } from "../store";
 
 export default {
     name: 'AppHeader',
@@ -12,7 +11,6 @@ export default {
     },
     data() {
         return {
-            store,
             navBarMenu: ["HOME", "PAGES", "PORTFOLIO", "BLOG", "SHOP", "ELEMENTS"]        //voci del menu nell header
 
         }
@@ -24,12 +22,12 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
-    <section id="header" class="wrap">
-        <div class="ms_container1 d-sm-flex justify-content-between align-items-center">
+    <header id="header" class="wrap">
+        <div class="ms_container1 d-flex justify-content-between align-items-center">
             <a href=""><img src="../assets/img/img/logo-sidearea-1.png" alt=""></a>
             <NavBarHeader :listMenu="navBarMenu" />
         </div>
-    </section>
+    </header>
     <div class="ms_container1">
         <JumbotronApp />
     </div>
@@ -43,14 +41,13 @@ export default {
 
 .wrap {
     position: relative;
+    box-shadow:15px 9px 15px 13px rgb(0 0 0 / 0.8);
     .ms_container1{
         height: $header-h;
      
         .jumbo-container {
             position: relative;
-    
         }
     }
-
 }
 </style>

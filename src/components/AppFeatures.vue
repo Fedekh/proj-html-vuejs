@@ -60,35 +60,55 @@ export default {
     h2 {
         font-size: 3rem;
     }
+
+    @media (max-width: $md) {
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+
     .cta {
         position: relative;
 
         .wave {
             position: absolute;
-            left: 124px;
-            top: -6px;
+            left: 12%;
+            top: -3%;
             z-index: -1;
             width: 76%;
         }
-    }
 
-    .cta-image {
-        margin-bottom: 30px;
-        position: relative;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        background-color: #FAF7F1;
+        .cta-image {
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #cdcccb;
 
-        i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 2rem;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+            }
+
         }
 
+        @media (max-width: $md) {
+            h4 {
+                font-size: 1rem;
+
+            }
+
+            p {
+                font-size: .7rem;
+            }
+
+        }
 
     }
+
 }
 </style>

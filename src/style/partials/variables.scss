@@ -2,7 +2,6 @@
 $header-h:70px;
 $width-ms1:90%;
 $width-ms2:60%;
-
 $footer-h:150px;
 
 // Backgroud colors:13
@@ -12,13 +11,16 @@ $footer-bg:#C0E1CF;
 $features-bg:#FAF7F2;
 $minor-bg:#f5d8ca;
 
-// Text colors:11
-
-// Contrast issuse:1
-
-// Fill colors:4
 
 // Border colors:4
 $btn-border: #E1C0B0;
+
+//Breakpoints:
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 
 

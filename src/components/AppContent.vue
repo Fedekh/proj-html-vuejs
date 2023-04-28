@@ -81,6 +81,7 @@ export default {
 
 .content {
     position: relative;
+
     .wrapper {
         width: 100%;
         position: relative;

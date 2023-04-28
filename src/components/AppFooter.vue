@@ -1,6 +1,5 @@
 <script>
 import FooterList from "./FooterList.vue";
-import { store } from "../store";
 
 export default {
     name: 'AppFooter',
@@ -9,7 +8,6 @@ export default {
     },
     data() {
         return {
-            store,
             footerMenu: {                   // footerMenu:object
                 logo: ["../assets/img/img/logo-sidearea-1-1.png", "Let's get creative"],
                 email_phone: ["pippo@gmail.com", "+35 68 44 88"],
@@ -42,8 +40,7 @@ export default {
 <template>
     <section id="footer" class="wrapper-footer">
         <div class="footer">
-            <ul
-                class="container d-sm-flex flex-lg-row justify-content-md-evenly align-items-md-center flex-sm-column justify-content-sm-start align-items-sm-center">
+            <ul class="container d-flex flex-row justify-content-evenly align-items-center">
                 <li class="text-center">
                     <a href="">
                         <img :src="getImagePath()" alt="">
@@ -51,9 +48,9 @@ export default {
                     <p>{{ footerMenu.logo[1] }}</p>
                 </li>
                 <FooterList :footerMenu="footerMenu" :stayInTouchIcons="footerMenu.stayInTouch[1]" />
-
             </ul>
         </div>
+
     </section>
 </template>
 
@@ -61,6 +58,7 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
+@use "../style/general.scss" as *;
 @use "../style/partials/variables.scss" as *;
 
 .wrapper-footer {
@@ -70,6 +68,14 @@ export default {
     .container {
         height: $footer-h;
         margin-bottom: 0;
+        font-size: 0.7rem;
+
+        @media (max-width: $md) {
+            p {
+                font-size: .5rem;
+            }
+        }
     }
+
 }
 </style>
