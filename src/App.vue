@@ -34,6 +34,5 @@ export default {
 
 body {
     background-color: $body-bg;
-    
 }
 </style>

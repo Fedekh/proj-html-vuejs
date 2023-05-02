@@ -12,21 +12,22 @@ export default {
 
 
 <template>
-    <li class="d-flex flex-column">
+    <div class="d-flex flex-column">
         <a href="">{{ footerMenu.email_phone[0] }}</a>
         <a href="">{{ footerMenu.email_phone[1] }}</a>
 
-    </li>
-    <li class="d-flex flex-column">
+    </div>
+    <div class="d-flex flex-column">
         <a href="">{{ footerMenu.address[0] }}</a>
         <a href="">{{ footerMenu.address[1] }}</a>
-    </li>
-    <li class="d-flex flex-column">
+    </div>
+    <div class="d-flex flex-column">
         <a href="">{{ footerMenu.stayInTouch[0] }}</a>
         <div>
             <a href="" class="mx-2" v-for="icon in stayInTouchIcons" :key="icon" v-html="icon"></a>
         </div>
-    </li>
+    </div>
+
 </template>
 
 

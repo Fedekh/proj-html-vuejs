@@ -40,7 +40,6 @@ export default {
             this.sensoMarcia = false;
             this.startAutoplay();
         },
-
         showPrev() {                                    // funzione per mostrare l'immagine precedente
             clearInterval(this.interval);
             if (this.activeImage > 0) {
@@ -51,7 +50,6 @@ export default {
             this.sensoMarcia = true;
             this.startAutoplay();
         },
-
         startAutoplay() {                                   // funzione per l'autoplay
             this.interval = setInterval(() => {
                 if (this.sensoMarcia) {
@@ -152,6 +150,7 @@ export default {
 
                 &:hover {
                     background-color: $btn-border;
+                    transition: 1s linear;
                 }
             }
 
@@ -185,7 +184,7 @@ export default {
 
             #out_2 {
                 bottom: 20%;
-                left: 45%;
+                left: 55%;
             }
 
             #out_3 {

@@ -64,7 +64,6 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
-@use "../style/general.scss" as *;
 @use "../style/partials/variables.scss" as *;
 
 .newsletter {
@@ -83,8 +82,6 @@ export default {
             filter: blur(0);
             background-color: #5fdf0a97;
             transform: scale(1.2);
-            position: relative;
-            top: -20px;
             z-index: 9;
             box-shadow: -1px 3px 20px 20px rgba(0, 0, 0, 0.7);
         }

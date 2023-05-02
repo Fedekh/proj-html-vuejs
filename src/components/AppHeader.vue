@@ -36,7 +36,6 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style scoped lang="scss">
-@use "../style/general.scss" as *;
 @use "../style/partials/variables.scss" as *;
 
 .wrap {

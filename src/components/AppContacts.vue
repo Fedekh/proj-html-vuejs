@@ -23,7 +23,6 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <style lang="scss" scoped>
-@use "../style/general.scss" as *;
 @use "../style/partials/variables.scss" as *;
 
 section {
@@ -40,6 +39,7 @@ section {
             background-color: $footer-bg;
             width: 150px;
             height: 40px;
+            transition: .5s linear;
 
             &:hover {
                 transform: scale(1.2);

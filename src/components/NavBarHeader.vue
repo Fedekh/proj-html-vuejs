@@ -16,7 +16,7 @@ export default {
     setMenuItem(item) {                 //voci del menu nell header
       this.currentMenuItem = item;
     },
-    toggleHamburger() {
+    toggleHamburger() {           
       this.showMenu = !this.showMenu;
     },
     setActiveItem(index) {
@@ -34,7 +34,11 @@ export default {
 <!-- ►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►►► -->
 
 <template>
+  
   <section class="navbarheader">
+
+    <!-- HAMBURGER MENU -->
+
     <nav>
       <div id="hamburger" @click="toggleHamburger">
         <i class="fa-solid fa-bars"></i>
@@ -50,9 +54,10 @@ export default {
     </nav>
 
 
-
+    <!-- MENU STANDARD -->
+    
     <ul class="d-none d-md-flex flex-md-row gap-3 m-0 align-items-center">
-      <li v-for="(listitem, index) in listMenu" :key="index" :class="{ 'active': currentMenuItem === listitem }"
+      <li v-for="(listitem, index) in listMenu" :key="index" :class="{ active: currentMenuItem === listitem }"
         @click="setMenuItem(listitem)">
         <a href="#">{{ listitem }}</a>
       </li>
@@ -102,12 +107,7 @@ export default {
         width: 200px;
         font-size: .9rem;
       }
-
-      & i {
-        float: right;
-      }
-
-
+o     
       & li a {
         display: block;
         color: green;
@@ -130,9 +130,6 @@ export default {
 
   }
 }
-
-
-
 
 
 ul {
