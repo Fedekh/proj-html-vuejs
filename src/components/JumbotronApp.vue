@@ -1,4 +1,5 @@
 <script >
+
 export default {
     name: 'Jumbotron',
     data() {
@@ -85,6 +86,7 @@ export default {
 
 <template>
     <div class="wrapper pt-1 pb-5 my-5">
+
         <section class="container d-sm-flex justify-content-between">
             <article class="col-5 description-jumbo d-sm-flex flex-column justify-content-center">
                 <h1 class="text-center rounded p-2">Devotion that never <span>ends</span></h1>
@@ -114,6 +116,8 @@ export default {
             <i v-for="i in sliders.length" :key="i" :class="['fas', 'fa-circle', { active: activeImage === i - 1 }]"
                 @click="showslide(i - 1)"></i>
         </div>
+        <div>
+  </div>
     </div>
 </template>
 
@@ -128,6 +132,42 @@ export default {
 .wrapper {
     position: relative;
     width: 100%;
+
+    input[type="checkbox"] {
+        position: relative;
+        width: 80px;
+        height: 40px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #fff;
+        outline: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+    }
+
+    input[type="checkbox"]::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: red;
+        background: #00ed64;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    input[type="checkbox"]:checked::before {
+        transform: translateX(100%);
+        background: #00ed64;
+
+    }
+
+    input[type="checkbox"]:checked {
+        background: black;
+    }
 
     section {
         width: $width-ms1;
